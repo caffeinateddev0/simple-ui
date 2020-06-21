@@ -24,11 +24,14 @@ interface ProviderProps {
 
 /**
  * @summary createDataContext: Uses react context to pass state using a redux style action / reducer
+ * To use wrap the component with the provider, the use the useContext hook with the Context to access
+ * the state and actions.
  * @param { reducer, actions, initialState }: Initial object containing the reducer, actions, and initialState
  * @param { state: any, action } reducer: Function that receives the current state as the first
  * prop and incoming action as the second
  * @param { object } actions = object containing avaliable actions
  * @param { any } initalState = inital state provided to the reducer
+ * @returns {Context, Provider}
  */
 export const createDataContext = ({
   reducer,
